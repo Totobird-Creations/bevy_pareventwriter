@@ -1,5 +1,5 @@
 # `bevy_pareventwriter`
-A simple library for [bevy](https://github.com/bevy) to write events in parallel.
+A simple library for [Bevy](https://github.com/bevyngine/bevy) to write events in parallel.
 
 
 ### Why?

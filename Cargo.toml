@@ -1,7 +1,15 @@
 [package]
-name = "bevy_pareventwriter"
-version = "0.1.0"
-edition = "2024"
+name        = "bevy_pareventwriter"
+version     = "0.1.0"
+description = "A simple library for Bevy to write events in parallel."
+authors     = [ "Totobird Creations <https://github.com/Totobird-Creations>" ]
+edition     = "2024"
+
+license    = "MIT"
+readme     = "README.md"
+repository = "https://github.com/Totobird-Creations/bevy_pareventwriter"
+keywords   = [ "bevy", "bevyengine", "game", "event", "parallel" ]
+categories = [ "game-development", "game-engines" ]
 
 [lints.rust]
 missing_docs = "deny"
