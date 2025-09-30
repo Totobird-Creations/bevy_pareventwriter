@@ -1,0 +1,17 @@
+[package]
+name = "bevy_pareventwriter"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+missing_docs = "deny"
+
+
+[dependencies.bevy_ecs]
+version          = "0.16"
+default-features = false
+
+[dependencies.bevy_utils]
+version          = "0.16"
+default-features = false
+features         = [ "std" ]
