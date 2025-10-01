@@ -16,10 +16,10 @@ missing_docs = "deny"
 
 
 [dependencies.bevy_ecs]
-version          = "0.16"
+version          = "0.17"
 default-features = false
 
 [dependencies.bevy_utils]
-version          = "0.16"
+version          = "0.17"
 default-features = false
 features         = [ "std" ]
