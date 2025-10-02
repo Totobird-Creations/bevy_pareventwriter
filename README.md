@@ -1,23 +1,23 @@
-# `bevy_pareventwriter`
-A simple library for [Bevy](https://github.com/bevyngine/bevy) to write events in parallel.
+# `bevy_parmessagewriter`
+A simple library for [Bevy](https://github.com/bevyngine/bevy) to write messages in parallel.
 
 
 ### Why?
-Bevy has the [`EventWriter<T>`](https://docs.rs/bevy_ecs/latest/bevy_ecs/event/struct.EventWriter.html)
+Bevy has the [`MessageWriter<T>`](https://docs.rs/bevy_ecs/latest/bevy_ecs/message/struct.MessageWriter.html)
  system parameter. However, if you are parallel iterating through something such as a query
  ([`Query::par_iter`](https://docs.rs/bevy_ecs/latest/bevy_ecs/system/struct.Query.html#method.par_iter)),
- `EventWriter`s are unusable.
+ `MessageWriter`s are unusable.
 
-[`ParallelEventWriter`](https://docs.rs/bevy_pareventwriter/struct.ParallelEventWriter.html) keeps
- thread-local event queues, which are merged and sent after the system finishes.
+[`ParallelMessageWriter`](https://docs.rs/bevy_parmessagewriter/struct.ParallelMessageWriter.html) keeps
+ thread-local message queues, which are merged and sent after the system finishes.
 
 
 ### Example
 Here is a crude example of where this might be useful.
 ```rust
-fn parallel_event_system(
+fn parallel_message_system(
     mut query : Query<(Entity, &Velocity)>,
-    par_writer : ParallelEventWriter<Supersonic>
+    par_writer : ParallelMessageWriter<Supersonic>
 ) {
     query.par_iter().for_each(|(entity, velocity)| {
         if velocity.magnitude() > 343.2 {
@@ -26,4 +26,4 @@ fn parallel_event_system(
     });
 }
 ```
-`ParallelEventWriter` can be used to write events from inside of the parallel iteration.
+`ParallelMessageWriter` can be used to write messages from inside of the parallel iteration.

@@ -1,14 +1,14 @@
 [package]
-name        = "bevy_pareventwriter"
+name        = "bevy_parmessagewriter"
 version     = "0.1.0"
-description = "A simple library for Bevy to write events in parallel."
+description = "A simple library for Bevy to write messages in parallel."
 authors     = [ "Totobird Creations <https://github.com/Totobird-Creations>" ]
 edition     = "2024"
 
 license    = "MIT"
 readme     = "README.md"
-repository = "https://github.com/Totobird-Creations/bevy_pareventwriter"
-keywords   = [ "bevy", "bevyengine", "game", "event", "parallel" ]
+repository = "https://github.com/Totobird-Creations/bevy_parmessagewriter"
+keywords   = [ "bevy", "bevyengine", "game", "message", "parallel" ]
 categories = [ "game-development", "game-engines" ]
 
 [lints.rust]
@@ -22,4 +22,4 @@ default-features = false
 [dependencies.bevy_utils]
 version          = "0.17"
 default-features = false
-features         = [ "std" ]
+features         = [ "parallel" ]
